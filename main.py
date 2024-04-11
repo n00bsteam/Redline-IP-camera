@@ -94,7 +94,7 @@ class Redline:
             return False
 
     def download_video(self, record):
-        t = threading.Thread(target=self.sessionend_heartbeat)
+        t = threading.Thread(target=self.send_heartbeat)
         t.start()
         url = f"{self.camera_url}/download.mp4"
         start_date = record["start_date"].split("/")
